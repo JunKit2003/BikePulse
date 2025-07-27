@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="logo.png">
+  <title>Bike Pulse</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="logo.png" alt="Bike Pulse Logo" class="logo-img">
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Drive Your Adventure with Bike Pulse</h1>
+      <p>Custom bikes, expert service, and precision wheel building—crafted just for you.</p>
+      <a href="#contact" class="btn btn-primary">Contact Us</a>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <h2>What We Do</h2>
+    <div class="services-list">
+      <div class="service-card">
+        <img src="custom-bike-builds.jpg" alt="Custom mountain bikes in the forest" class="service-photo">
+        <h3>Custom Bike Builds</h3>
+        <p>We design and assemble bikes tailored to your style, fit, and performance needs. Every build is unique—just like you.</p>
+      </div>
+      <div class="service-card">
+        <img src="bike-repairs.jpg" alt="Bike in repair shop with tools" class="service-photo">
+        <h3>Bike Services</h3>
+        <p>From tune-ups to full repairs, our expert mechanics keep your ride smooth, safe, and ready for adventure.</p>
+      </div>
+      <div class="service-card">
+        <img src="wheel-building.jpg" alt="Custom built bike wheels" class="service-photo">
+        <h3>Wheel Building</h3>
+        <p>Hand-built wheels for performance, durability, and style. Custom lacing, spoke selection, and expert truing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="faq-intro">
+      <span class="faq-eyebrow">GOT QUESTIONS? WE'VE GOT ANSWERS!</span>
+      <h2>Your bike service questions</h2>
+      <p>Discover all you need to know about our custom builds, repairs, and services. Get ready for your next adventure!</p>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>What do we offer?</h3>
+        <p>From custom builds to wheel magic, we handle it all. Mountain or road, your ride is in expert hands.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How to book a repair?</h3>
+        <p>Give us a call or just drop by! While walk-ins are cool, booking ahead speeds things up.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Custom wheel builds?</h3>
+        <p>Absolutely! We craft wheels tailored to your style. Let's roll with the best components.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Supported brands?</h3>
+        <p>We partner with top brands. Share your favorites, and we'll make it happen.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Repair time frame?</h3>
+        <p>Most fixes are done in 1-3 days. Complex jobs might take a bit longer. We'll keep you posted!</p>
+      </div>
+      <div class="faq-item">
+        <h3>Service estimates?</h3>
+        <p>Yes, we offer free estimates. Bring your bike in or contact us for a quote before we start.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About Bike Pulse</h2>
+    <p>Bike Pulse is dedicated to quality, customization, and supporting our local cycling community. We believe every rider deserves a bike that fits their journey, and we’re here to make that happen with expert service and a passion for cycling.</p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form" id="contactForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+        var phone = '60127496578'; // WhatsApp number without +
+        var text = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nMessage: ' + message);
+        var url = 'https://wa.me/' + phone + '?text=' + text;
+        window.open(url, '_blank');
+      });
+    </script>
+    <div class="contact-info">
+      <h3>Store Location</h3>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1448.2543738868!2d101.6298011404379!3d3.209657306514758!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4fe8fee4200b%3A0xc5fbe2b03bf8a86b!2sBike%20Pulse!5e1!3m2!1sen!2smy!4v1752827290470!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>      </div>
+      </div>
+  </section>
+
+  <footer class="footer">
+    <div class="social-media">
+      <a href="https://www.facebook.com/profile.php?id=61556627501099" aria-label="Facebook" class="social-icon" target="_blank" rel="noopener">
+        <img src="facebook-logo.svg" alt="Facebook" width="24" height="24">
+      </a>
+      <a href="https://www.instagram.com/bikepulse.co/" aria-label="Instagram" class="social-icon" target="_blank" rel="noopener">
+        <img src="instagram-logo.svg" alt="Instagram" width="24" height="24">
+      </a>
+    </div>
+    <div class="copyright">&copy; 2025 Bike Pulse. All rights reserved.</div>
+  </footer>
+</body>
+</html> 
